@@ -38,3 +38,16 @@ document.getElementById('donate-feni').addEventListener('click', function () {
 })
 
 
+document.getElementById('donate-quota-movement').addEventListener('click', function () {
+    const inputText = document.getElementById('donate-quota-movement-field');
+    const inputValue = parseFloat(inputText.value);
+
+    let balance = parseFloat(document.getElementById('quota-movement-balance').innerText);
+
+    balance += inputValue;
+    accountBalance -= inputValue;
+    let newBalance = updateBanlance('quota-movement-balance', balance);
+    let newAmount = updateBanlance('account-balance', accountBalance);
+
+    inputText.value = '';
+})
