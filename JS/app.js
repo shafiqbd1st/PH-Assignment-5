@@ -19,4 +19,22 @@ document.getElementById('donate-noakhali').addEventListener('click', function ()
     accountBalance -= inputValue;
     let newBalance = updateBanlance('noakhali-balance', balance);
     let newAmount = updateBanlance('account-balance', accountBalance)
+
+    inputText.value = '';
 })
+
+document.getElementById('donate-feni').addEventListener('click', function () {
+    const inputText = document.getElementById('donate-feni-field');
+    const inputValue = parseFloat(inputText.value);
+
+    let balance = parseFloat(document.getElementById('feni-balance').innerText);
+
+    balance += inputValue;
+    accountBalance -= inputValue;
+    let newBalance = updateBanlance('feni-balance', balance);
+    let newAmount = updateBanlance('account-balance', accountBalance);
+
+    inputText.value = '';
+})
+
+
