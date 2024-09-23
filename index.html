@@ -8,8 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
     <script>
         tailwind.config = {
             theme: {
@@ -41,15 +43,15 @@
                 </div>
                 <div class="flex justify-center items-center space-x-2">
                     <img class="text-2xl font-semibold" src="./assets/coin.png" alt="">
-                    <p class="text-2xl font-semibold">10000.00</p>
+                    <p id="account-balance" class="text-2xl font-semibold"></p>
                     <p class="text-2xl font-semibold">BDT</p>
                 </div>
             </div>
         </nav>
         <!-- bg-base-200 -->
         <div class="text-center py-8 space-x-8  bg-gradient-to-b from-base-300 to-base-50">
-            <button class="btn btn-success text-xl">Donation</button>
-            <button class="btn btn-success text-xl">History</button>
+            <button class="btn text-xl  bg-primary border-none">Donation</button>
+            <button class="btn text-xl  border-none">History</button>
         </div>
         <hr>
     </header>
@@ -61,10 +63,10 @@
                 <div class="hero-content flex-col lg:flex-row gap-8">
                     <img src="./assets/noakhali.png" class="rounded-lg shadow-xl" />
                     <div class="space-y-2">
-                        <button class="btn text-gray-400">
+                        <button class="btn">
                             <img class="text-2xl font-semibold" src="./assets/coin.png" alt="">
-                            <p>00</p>
-                            <p>BDT</p>
+                            <p id="noakhali-balance" class="text-xl font-semibold">00</p>
+                            <p class="text-xl font-semibold">BDT</p>
                         </button>
                         <h1 class="text-2xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
                         <p class="py-6">
@@ -75,8 +77,11 @@
                             join us in supporting the relief efforts and making a positive impact on the lives of those
                             in need.
                         </p>
-                        <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
-                        <button class="btn  w-full bg-primary text-lg font-bold">Donate Now</button>
+                        <input id="donate-noakhali-field" type="text" placeholder="Write Donation Amount"
+                            class="input input-bordered w-full" />
+
+                        <button id="donate-noakhali" class="btn w-full bg-primary text-lg font-bold">Donate
+                            Now</button>
                     </div>
                 </div>
             </div>
@@ -98,8 +103,10 @@
                             join us in supporting the relief efforts and making a positive impact on the lives of those
                             in need.
                         </p>
-                        <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
-                        <button class="btn  w-full bg-primary text-lg font-bold">Donate Now</button>
+                        <input id="donate-feni-field" type="text" placeholder="Write Donation Amount"
+                            class="input input-bordered w-full " />
+                        <button id="donate-Feni" class="btn  w-full bg-primary text-lg font-bold">Donate
+                            Now</button>
                     </div>
                 </div>
             </div>
@@ -124,8 +131,10 @@
                             Please consider making a
                             donation to support these brave individuals in their time of need.
                         </p>
-                        <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full " />
-                        <button class="btn  w-full bg-primary text-lg font-bold">Donate Now</button>
+                        <input id="donate-quota-movement-field" type="text" placeholder="Write Donation Amount"
+                            class="input input-bordered w-full " />
+                        <button id="donate-quota-movement" class="btn  w-full bg-primary text-lg font-bold">Donate
+                            Now</button>
                     </div>
                 </div>
             </div>
