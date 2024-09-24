@@ -52,8 +52,6 @@ function inputValidation(inputValue, accountBalance) {
     else {
         return false;
     }
-
-
 }
 
 
@@ -146,6 +144,7 @@ donateQuotaMovement.addEventListener('click', function () {
 
     inputText.value = '';
 })
+
 
 
 const historyBtn = document.getElementById('history-btn');
