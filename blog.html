@@ -8,9 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -35,29 +33,33 @@
 
     <header class="sticky top-0 z-10 ">
         <nav class="bg-[#F9F7F3]">
-            <div class="w-[90%] mx-auto flex justify-between items-center py-8">
+            <div class="w-[90%] mx-auto flex justify-between items-center py-4">
                 <div>
-                    <button class="text-2xl font-semibold btn btn-success bg-primary border-none hover:text-white"><a
-                            href="./index.html">Home</a></button>
+                    <button id="home-btn"
+                        class="text-xl font-semibold btn btn-success bg-primary border-none hover:text-white">Home</button>
+                    <!-- <button class="text-xl font-semibold btn btn-success bg-primary border-none hover:text-white"><a href="./index.html">Home</a></button> -->
                 </div>
                 <div class="hidden lg:flex justify-center items-center space-x-3 ">
                     <img src="./assets/logo.png" alt="">
-                    <h2 class="text-2xl font-semibold">Donate Bangladesh</h2>
+                    <h2 class="text-xl font-semibold">Donate Bangladesh</h2>
                 </div>
                 <div class="flex justify-center items-center space-x-2">
                     <img class="text-2xl font-semibold" src="./assets/coin.png" alt="">
-                    <p id="account-balance" class="text-2xl font-semibold"></p>
-                    <p class="text-2xl font-semibold">BDT</p>
+                    <p id="account-balance" class="text-xl font-semibold"></p>
+                    <p class="text-xl font-semibold">BDT</p>
                 </div>
             </div>
         </nav>
 
+    </header>
+
+    <main>
         <div class="w-[90%] mx-auto mt-10 space-y-3">
-            <h1 class="text-4xl font-bold p-1 mb-5 ">Important FAQ <span><i
+            <h1 class="text-3xl font-bold p-1 mb-5 ">Important FAQ <span><i
                         class="fa-regular fa-circle-question fa-bounce"></i></span></h1>
 
             <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
-                <div class="collapse-title text-2xl font-medium">What is the Document Object Model (DOM)?</div>
+                <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
                 <div class="collapse-content">
                     <p class="text-lg pl-4">DOM stands for 'Document Object Model' Document refers to the HTML
                         document.
@@ -74,7 +76,7 @@
 
 
             <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
-                <div class="collapse-title text-2xl font-medium">How do you select an element from the DOM?</div>
+                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
                 <div class="collapse-content">
                     <p class="text-lg pl-4">In JavaScript you can use several methods depending on how specific you
                         want
@@ -88,7 +90,7 @@
 
 
             <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
-                <div class="collapse-title text-2xl font-medium">What is event delegation in the context of the DOM,
+                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM,
                     and
                     why is it useful?</div>
                 <div class="collapse-content">
@@ -109,7 +111,7 @@
 
 
             <div tabindex="0" class="collapse collapse-arrow border-base-300 bg-base-200 border">
-                <div class="collapse-title text-2xl font-medium">How do you manipulate an element's attributes and
+                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and
                     styles
                     using the DOM?</div>
                 <div class="collapse-content">
@@ -126,19 +128,17 @@
             </div>
 
         </div>
-
-</body>
-
-</html>
-</div>
-
-
-</header>
+    </main>
 
 
 
-
-<script src="./JS/app.js"></script>
+    <script src="./JS/app.js"></script>
+    <script>
+        const homeBtn = document.getElementById("home-btn");
+        homeBtn.addEventListener("click", function () {
+            window.location.href = "./index.html";
+        });
+    </script>
 </body>
 
 </html>

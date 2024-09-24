@@ -33,31 +33,33 @@
 
     <header class="sticky top-0 z-10 ">
         <nav class="bg-[#F9F7F3]">
-            <div class="w-[90%] mx-auto flex justify-between items-center py-8">
+            <div class="w-[90%] mx-auto flex justify-between items-center py-4">
                 <div>
-                    <button class="text-2xl font-semibold btn btn-success bg-primary border-none hover:text-white"><a
-                            href="./blog.html">Blog</a></button>
+                    <button id="blog-btn"
+                        class="text-xl font-semibold btn btn-success bg-primary border-none hover:text-white">Blog</button>
+                    <!-- <button class="text-xl font-semibold btn btn-success bg-primary border-none hover:text-white"><a
+                            href="./blog.html">Blog</a></button> -->
                 </div>
                 <div class="hidden lg:flex justify-center items-center space-x-3 ">
                     <img src="./assets/logo.png" alt="">
-                    <h2 class="text-2xl font-semibold">Donate Bangladesh</h2>
+                    <h2 class="text-xl font-semibold">Donate Bangladesh</h2>
                 </div>
                 <div class="flex justify-center items-center space-x-2">
                     <img class="text-2xl font-semibold" src="./assets/coin.png" alt="">
-                    <p id="account-balance" class="text-2xl font-semibold"></p>
-                    <p class="text-2xl font-semibold">BDT</p>
+                    <p id="account-balance" class="text-xl font-semibold"></p>
+                    <p class="text-xl font-semibold">BDT</p>
                 </div>
             </div>
         </nav>
         <!-- bg-base-200 -->
-        <div class="text-center py-8 space-x-8  bg-gradient-to-b from-base-300 to-base-200">
-            <button id="donation-btn" class="btn text-xl bg-primary border-none">Donation</button>
-            <button id="history-btn" class="btn text-xl text-gray-500 border-none">History</button>
+        <div class="text-center py-4 space-x-8  bg-gradient-to-b from-base-300 to-base-200">
+            <button id="donation-btn" class="btn text-lg bg-primary border-none">Donation</button>
+            <button id="history-btn" class="btn text-lg text-gray-500 border-none">History</button>
         </div>
         <hr>
     </header>
 
-    <main class="my-20">
+    <main class="my-10">
         <div id="donate-container"
             class="w-[90%] mx-auto flex flex-col gap-8 justify-between items-center py-8 border-2 boreder-grary-200 rounded-lg">
             <div class="hero">
@@ -66,10 +68,11 @@
                     <div class="space-y-2">
                         <button class="btn">
                             <img class="text-2xl font-semibold" src="./assets/coin.png" alt="">
-                            <p id="noakhali-balance" class="text-xl font-semibold">00</p>
-                            <p class="text-xl font-semibold">BDT</p>
+                            <p id="noakhali-balance" class="text-lg font-semibold">00</p>
+                            <p class="text-lg font-semibold">BDT</p>
                         </button>
-                        <h1 id="noakhali-title" class="text-2xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
+                        <h1 id="noakhali-title" class="text-2xl font-bold">Donate for Flood at Noakhali, Bangladesh
+                        </h1>
                         <p class="py-6">
                             The recent floods in Noakhali have caused significant damage to homes infrastructure. Your
                             donation will help provide
@@ -94,8 +97,8 @@
                     <div class="space-y-2">
                         <button class="btn ">
                             <img class="text-2xl font-semibold" src="./assets/coin.png" alt="">
-                            <p id="feni-balance" class="text-xl font-semibold">00</p>
-                            <p class="text-xl font-semibold">BDT</p>
+                            <p id="feni-balance" class="text-lg font-semibold">00</p>
+                            <p class="text-lg font-semibold">BDT</p>
                         </button>
                         <h1 id="feni-title" class="text-2xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
                         <p class="py-6">
@@ -155,10 +158,10 @@
                         <!-- <button class="btn">open modal</button> -->
                         <dialog id="my_modal_1" class="modal modal-bottom sm:modal-middle">
                             <div class="modal-box flex flex-col justify-between items-center">
-                                <h3 class="text-5xl font-bold mb-3">Congrates!</h3>
+                                <h3 class="text-4xl font-bold mb-3">Congrates!</h3>
                                 <img src="./assets/coin.png" alt="">
                                 <p class="py-4 text-xl">You Have Donated for Humankind</p>
-                                <p class="text-3xl font-bold py-4">Successfully</p>
+                                <p class="text-4xl font-bold py-4">Successfully</p>
                                 <div class="modal-action">
                                     <form method="dialog">
                                         <!-- if there is a button in form, it will close the modal -->
@@ -182,6 +185,12 @@
 
 
     <script src="./JS/app.js"></script>
+    <script>
+        const homeBtn = document.getElementById("blog-btn");
+        homeBtn.addEventListener("click", function () {
+            window.location.href = "./blog.html";
+        });
+    </script>
 </body>
 
 </html>
