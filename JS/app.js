@@ -18,8 +18,6 @@ function addHistory(taka, title) {
 
 }
 
-// addHistory(500, 'feni-title');
-
 function updateBanlance(id, amount) {
     let totalAmount = parseFloat(amount);
     let newAmount = document.getElementById(id).innerText = `${totalAmount.toFixed(2)}`;
@@ -32,20 +30,16 @@ function inputValidation(inputValue, accountBalance) {
         alert('Invalid Input!');
         return true;
     }
-
-    for (let x of inputValue) {
-        if (isNaN(x)) {
-            alert('Invalid Input!');
-            return true;
-        }
+    else if (isNaN(inputValue)) {
+        alert('Invalid Input!');
+        return true;
     }
-
-    if (inputValue < 0) {
+    else if (parseFloat(inputValue) < 0) {
         alert('Invalid Input!');
         return true;
 
     }
-    else if (inputValue > accountBalance) {
+    else if (parseFloat(inputValue) > accountBalance) {
         alert("don't have sufficient balance!");
         return true;
     }
