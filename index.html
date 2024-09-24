@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Donate BD </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
@@ -29,7 +29,7 @@
     </script>
 </head>
 
-<body>
+<body class="font-Lexend">
 
     <header class="sticky top-0 z-10 ">
         <nav class="bg-[#F9F7F3]">
@@ -50,14 +50,14 @@
         </nav>
         <!-- bg-base-200 -->
         <div class="text-center py-8 space-x-8  bg-gradient-to-b from-base-300 to-base-50">
-            <button class="btn text-xl  bg-primary border-none">Donation</button>
-            <button class="btn text-xl  border-none">History</button>
+            <button id="donation-btn" class="btn text-xl bg-primary border-none">Donation</button>
+            <button id="history-btn" class="btn text-xl text-gray-500 border-none">History</button>
         </div>
         <hr>
     </header>
 
     <main class="mt-20">
-        <div
+        <div id="donate-container"
             class="w-[90%] mx-auto flex flex-col gap-8 justify-between items-center py-8 border-2 boreder-grary-200 rounded-lg">
             <div class="hero">
                 <div class="hero-content flex-col lg:flex-row gap-8">
@@ -68,7 +68,7 @@
                             <p id="noakhali-balance" class="text-xl font-semibold">00</p>
                             <p class="text-xl font-semibold">BDT</p>
                         </button>
-                        <h1 class="text-2xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
+                        <h1 id="noakhali-title" class="text-2xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
                         <p class="py-6">
                             The recent floods in Noakhali have caused significant damage to homes infrastructure. Your
                             donation will help provide
@@ -79,7 +79,9 @@
                         </p>
                         <input id="donate-noakhali-field" type="text" placeholder="Write Donation Amount"
                             class="input input-bordered w-full" />
-
+                        <p id="donate-noakhali-error" class="text-red-500 text-md mt-1 hidden">
+                            ⚠️ Invalid Donate!
+                        </p>
                         <button id="donate-noakhali" class="btn w-full bg-primary text-lg font-bold">Donate
                             Now</button>
                     </div>
@@ -94,7 +96,7 @@
                             <p id="feni-balance" class="text-xl font-semibold">00</p>
                             <p class="text-xl font-semibold">BDT</p>
                         </button>
-                        <h1 class="text-2xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
+                        <h1 id="feni-title" class="text-2xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
                         <p class="py-6">
                             The recent floods in Noakhali have caused significant damage to homes infrastructure. Your
                             donation will help provide
@@ -105,7 +107,12 @@
                         </p>
                         <input id="donate-feni-field" type="text" placeholder="Write Donation Amount"
                             class="input input-bordered w-full " />
-                        <button id="donate-feni" class="btn  w-full bg-primary text-lg font-bold">Donate
+
+                        <p id="donate-feni-error" class="text-red-500 text-md mt-1 hidden">
+                            ⚠️ Invalid Donate!
+                        </p>
+
+                        <button id="donate-feni" class="btn w-full bg-primary text-lg font-bold">Donate
                             Now</button>
                     </div>
                 </div>
@@ -119,7 +126,7 @@
                             <p id="quota-movement-balance" class="text-xl font-semibold">00</p>
                             <p class="text-xl font-semibold">BDT</p>
                         </button>
-                        <h1 class="text-2xl font-bold">Aid for Injured in the Quota Movement</h1>
+                        <h1 id="quota-title" class="text-2xl font-bold">Aid for Injured in the Quota Movement</h1>
                         <p class="py-6">
                             The recent Quota movement has resulted in numerous injuries and significant hardship for
                             many individuals. Your support
@@ -133,12 +140,43 @@
                         </p>
                         <input id="donate-quota-movement-field" type="text" placeholder="Write Donation Amount"
                             class="input input-bordered w-full " />
-                        <button id="donate-quota-movement" class="btn  w-full bg-primary text-lg font-bold">Donate
+
+                        <p id="donate-quota-error" class="text-red-500 text-md mt-1 hidden">
+                            ⚠️ Invalid Donate!
+                        </p>
+
+
+                        <button id="donate-quota-movement" class="btn w-full bg-primary text-lg font-bold">Donate
                             Now</button>
+
+                        <!-- model section -->
+                        <!-- Open the modal using ID.showModal() method -->
+                        <!-- <button class="btn">open modal</button> -->
+                        <dialog id="my_modal_1" class="modal modal-bottom sm:modal-middle">
+                            <div class="modal-box flex flex-col justify-between items-center">
+                                <h3 class="text-5xl font-bold mb-3">Congrates!</h3>
+                                <img src="./assets/coin.png" alt="">
+                                <p class="py-4 text-xl">You Have Donated for Humankind</p>
+                                <p class="text-3xl font-bold py-4">Successfully</p>
+                                <div class="modal-action">
+                                    <form method="dialog">
+                                        <!-- if there is a button in form, it will close the modal -->
+                                        <button class="btn text-xl">close confirmation</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
+                        <!-- model section -->
                     </div>
                 </div>
             </div>
+
         </div>
+
+        <div id="history" class="w-[90%] mx-auto hidden">
+
+        </div>
+
     </main>
 
 
