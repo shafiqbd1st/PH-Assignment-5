@@ -173,3 +173,19 @@ donationBtn.addEventListener('click', function () {
     historyElement.classList.add('hidden');
     donateContainer.classList.remove('hidden');
 })
+
+function errorInput(id) {
+    document.getElementById(id).classList.add('hidden');
+}
+
+document.getElementById('donate-noakhali-field').addEventListener('input', function () {
+    errorInput('donate-noakhali-error')
+});
+
+document.getElementById('donate-feni-field').addEventListener('input', function () {
+    errorInput('donate-feni-error')
+});
+
+document.getElementById('donate-quota-movement-field').addEventListener('input', function () {
+    errorInput('donate-quota-error')
+});
